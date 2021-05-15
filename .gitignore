@@ -1,3 +1,4 @@
 # Project exclude paths
 /blockchain/target/
 /miner/target/
+/.idea/

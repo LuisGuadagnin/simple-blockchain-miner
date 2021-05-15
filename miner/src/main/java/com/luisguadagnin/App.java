@@ -10,13 +10,13 @@ public class App
 {
     public static void main( String[] args )
     {
-        Blockchain b = new Blockchain(5);
+        var blockchain = new Blockchain(5);
 
         var miners = List.of(
-                new BlockMiner(b, 1),
-                new BlockMiner(b, 2),
-                new BlockMiner(b, 3),
-                new BlockMiner(b, 4)
+                new BlockMiner(blockchain, 1),
+                new BlockMiner(blockchain, 2),
+                new BlockMiner(blockchain, 3),
+                new BlockMiner(blockchain, 4)
         );
 
         var executorService = Executors.newFixedThreadPool(miners.size());

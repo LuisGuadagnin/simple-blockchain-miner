@@ -34,8 +34,8 @@ public class Block {
                 + timeStamp
                 + nonce
                 + data;
-        MessageDigest digest = null;
-        byte[] bytes = null;
+        MessageDigest digest;
+        byte[] bytes;
         try {
             digest = MessageDigest.getInstance("SHA-256");
             bytes = digest.digest(dataToHash.getBytes(UTF_8));
